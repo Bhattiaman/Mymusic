@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './Css/style.css';
+import './Css/utility.css';
+import Left from './Compoents/Left';
+// import Header from './Compoents/Header';
+import Right from './Compoents/Right';
 
-function App() {
+import Api from './Playlist/api';
+
+const App = () => {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </div>
+      {/* <Header /> */}
+      <Api/>
+      
+      <div className="container flex bg-black">
+        <Left />
+        <Right />
+
+        
+      </div>
+    </>
   );
 }
 
